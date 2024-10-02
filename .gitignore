@@ -2,7 +2,7 @@
 *.class
 
 # ignore below folders
-.vscode/
+.vscode/    
 
 # Log file
 *.log
