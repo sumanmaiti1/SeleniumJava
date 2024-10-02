@@ -8,6 +8,7 @@ Selenium Version = 4.25
 Browser = Edge, Chrome
 
 URL to test :
+-----------------
 https://tutorialsninja.com/demo/
 
 https://www.tutorialspoint.com/selenium/practice/text-box.php
