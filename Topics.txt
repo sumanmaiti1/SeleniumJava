@@ -1,0 +1,26 @@
+Topics to Cover in Selenium Tutorial :
+---------------------------------------
+1) Introduction
+    1) Typer Of testing
+    2) Manual Testing Vs Auromation Testing
+    3) Different Automation Tools
+    4) Selenium Introduction
+        1)  What is Selenium
+        2)  Type of Applications. What type of Applications selenium can work with ?
+        3)  Official Website
+        4)  Free or Paid Tool
+        5)  OS and Browser Compatibility
+        6)  Lanuage Binding of Selenium.
+        7)  Different Components of selenium ( Selenenium IDE, Selenium RC, Selenium Webdriver, Selenium Grid)
+        8)  Different Selenium Versions (v1.0 , 2.0, 3.0, 4.0)
+        9)  Prerequisite for Selenium Java ( Core Java, Maven, Basic Testing Knowledge, Basic Html Locators knowledge)
+        10) Setting Selenium Dependencies
+        11) Creating First Selenium Script
+2) Selenium Locators
+    1) DOM
+    2) Basic HTML Tags
+    3) HTML rags, Attributes, Value
+    4) Basic Locators
+        1) Id
+        2) Name
+        3) Class
