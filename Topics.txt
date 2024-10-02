@@ -19,7 +19,7 @@ Topics to Cover in Selenium Tutorial :
 2) Selenium Locators
     1) DOM
     2) Basic HTML Tags
-    3) HTML rags, Attributes, Value
+    3) HTML Tags, Attributes, Value
     4) Basic Locators
         1) Id
         2) Name
