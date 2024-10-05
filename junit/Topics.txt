@@ -1,3 +1,28 @@
+Topics to Cover : for JUNIT 5
+------------------------------
+            About Junit, Introduction, Different Vesrsions
+            First Junit Test
+        1)  Annotations
+        2)  Test Life cycle methods:
+        3)  Assertions
+        4)  Assumptions
+        5)  Exception Handling
+        6)  Disabling Tests
+        7)  Conditional Test Execution
+        8)  Tagging and Filtering
+        9)  Test Execution Order
+        10) Test Interfaces and Default Methods
+        11) Repeated Tests
+        12) Parameterized Tests 
+        13) Test Templates
+        14) Dynamic Tests
+        15) Parallel Execution
+        16) Running Tests
+        17) Console Launcher
+
+Introduction :
+------------------
+
 JUnit is a Testing Framework. The Junit 5 is the latest version of the testing framework, 
 and it has a lot of features when compared with Junit 4. JUnit 5, also known as JUnit Jupiter. 
 It introduces several new features and improvements over its predecessor, JUnit 4, 
@@ -19,25 +44,3 @@ functionalities in testing. The components are:
 
     JUnit Vintage : JUnit Vintage provides a TestEngine for running JUnit 3 and JUnit 4 based 
                     tests on the platform. 
-
-
-Topics to Cover :
------------------
-            First Junit Test
-        1)  Annotations
-        2)  Test Life cycle methods:
-        3)  Assertions
-        4)  Assumptions
-        5)  Exception Handling
-        6)  Disabling Tests
-        7)  Conditional Test Execution
-        8)  Tagging and Filtering
-        9)  Test Execution Order
-        10) Test Interfaces and Default Methods
-        11) Repeated Tests
-        12) Parameterized Tests 
-        13) Test Templates
-        14) Dynamic Tests
-        15) Parallel Execution
-        16) Running Tests
-        17) Console Launcher
