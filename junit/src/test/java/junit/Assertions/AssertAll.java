@@ -51,7 +51,7 @@ public class AssertAll {
 		executables.add(b);
 		
 		assertAll("My Heading", executables.stream());
-
+		
 	}
 }
 

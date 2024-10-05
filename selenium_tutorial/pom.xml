@@ -10,7 +10,7 @@
 
   <name>selenium_tutorial</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/sumanmaiti1/SeleniumJava/tree/main/selenium_tutorial</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,7 +29,7 @@
 <dependency>
      <groupId>org.junit.jupiter</groupId>
      <artifactId>junit-jupiter-api</artifactId>
-     <version>5.11.0</version>
+     <version>5.11.2</version>
      <scope>test</scope>
 </dependency>
     
