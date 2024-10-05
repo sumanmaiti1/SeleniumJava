@@ -1,9 +1,10 @@
 # SeleniumJava
 This project will contain Selenium Java stuffs
 
-Java Version = 21
+Java Version = 21;
+Selenium Version = 4.25;
+jUnit version = 5.11.2;
 
-Selenium Version = 4.25
 
 Browser = Edge, Chrome
 

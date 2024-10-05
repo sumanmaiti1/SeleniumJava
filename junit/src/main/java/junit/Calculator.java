@@ -8,27 +8,27 @@ package junit;
 
 public class Calculator {
 
-    double addition(double a, double b) {
+    public double addition(double a, double b) {
         return a+b;
     }
 
-    double subtraction(double a, double b) {
+    public double subtraction(double a, double b) {
         return a-b;
     }
 
-    double multiplication(double a, double b) {
+    public double multiplication(double a, double b) {
         return a*b;
     }
 
-    double division(double a, double b) {
+    public double division(double a, double b) {
         return a/b;
     }
 
-    double power(double a, double b) {
+    public double power(double a, double b) {
         return Math.pow(a, b);
     }
 
-    double percentage(double a, double b){
+    public double percentage(double a, double b){
         return a*b/100;
     }
 
