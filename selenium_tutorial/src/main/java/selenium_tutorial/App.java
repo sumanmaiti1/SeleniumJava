@@ -1,4 +1,4 @@
-package tutorial;
+package selenium_tutorial;
 
 /**
  * Hello world!

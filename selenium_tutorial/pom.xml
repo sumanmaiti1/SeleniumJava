@@ -4,13 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>selenium</groupId>
-  <artifactId>selenium</artifactId>
+  <groupId>selenium_tutorial</groupId>
+  <artifactId>selenium_tutorial</artifactId>
   <version>1.0.0</version>
 
-  <name>tutorial</name>
+  <name>selenium_tutorial</name>
   <!-- FIXME change it to the project's website -->
-  <url>https://github.com/sumanmaiti1/SeleniumJava/tree/main/tutorial</url>
+  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,13 +26,13 @@
       <version>4.25.0</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>junit-bom</artifactId>
-      <version>5.11.2</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
+<dependency>
+     <groupId>org.junit.jupiter</groupId>
+     <artifactId>junit-jupiter-api</artifactId>
+     <version>5.11.0</version>
+     <scope>test</scope>
+</dependency>
+    
   </dependencies>
 
   <build>
