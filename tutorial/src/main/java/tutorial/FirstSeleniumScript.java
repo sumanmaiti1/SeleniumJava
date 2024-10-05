@@ -2,18 +2,21 @@ package tutorial;
 
 import java.io.File;
 import java.util.Collections;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
 
+import tutorial.utilities.ReadPropertyFile;
+
 public class FirstSeleniumScript {
 
     public static void main(String[] args) {
 
+        //----------- reading EdgeDriver Path from Property File
+        String driverPath = ReadPropertyFile.read("msEdgeDriverPath");
         //--------- Creating a file object of Edge Driver 
-        File driverFile = new File("C:\\Users\\Radhe_Radhe\\Downloads\\msedgedriver.exe");
+        File driverFile = new File(driverPath);
         //--------- Creating a EdgeDriverService object for Edge Driver 
         EdgeDriverService service = new EdgeDriverService.Builder().usingDriverExecutable(driverFile).build();
 
