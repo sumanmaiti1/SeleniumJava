@@ -1,0 +1,23 @@
+
+In order to do parallel execution we need to create [junit-platform.properties] file in Resources folder inside src\test\Resources.
+And inside this we can edit below settings 
+
+#In General
+#junit.jupiter.execution.parallel.enabled = true
+#junit.jupiter.execution.parallel.config.strategy=dynamic
+#junit.jupiter.execution.parallel.mode.default = concurrent
+#junit.jupiter.execution.parallel.mode.classes.default = concurrent
+#junit.jupiter.execution.parallel.config.dynamic.factor
+#junit.jupiter.execution.parallel.config.dynamic.max-pool-size-factor = 3
+
+#Configuration parameters to execute top-level classes in parallel but methods in same thread
+#junit.jupiter.execution.parallel.enabled = true
+#junit.jupiter.execution.parallel.mode.default = same_thread
+#junit.jupiter.execution.parallel.mode.classes.default = concurrent
+junit.jupiter.execution.parallel.config.dynamic.max-pool-size-factor = 3
+
+#Configuration parameters to execute top-level classes sequentially but their methods in parallel
+junit.jupiter.execution.parallel.enabled = true
+junit.jupiter.execution.parallel.mode.default = concurrent
+junit.jupiter.execution.parallel.mode.classes.default = same_thread
+junit.jupiter.execution.parallel.config.dynamic.max-pool-size-factor = 3

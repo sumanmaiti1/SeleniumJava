@@ -9,16 +9,16 @@ Topics to Cover : for JUNIT 5
         5)  Exception Handling
         6)  Disabling Tests ------------------------------------- Covered in Annotations Disable*
         7)  Conditional Test Execution -------------------------- Covered in Annotations Disable*. Also can use Enable* options
-        8)  Tagging and Filtering
-        9)  Test Execution Order
+        8)  Tagging and Filtering ------------------------------- Covered in Annotations Tag1
+        9)  Test Execution Order -------------------------------- Covered in Annotations Ordered*
         10) Test Interfaces and Default Methods
         11) Repeated Tests -------------------------------------- Covered in Annotations RepeatedTest
         12) Parameterized Tests --------------------------------- Covered in Annotations Parameterized
-        13) Test Templates
-        14) Dynamic Tests
+        13) Test Templates - Dynamic Tests
+        14) Running Tests
         15) Parallel Execution
-        16) Running Tests
-        17) Console Launcher
+        16) Console Launcher
+        17) 
 
 Introduction :
 ------------------
