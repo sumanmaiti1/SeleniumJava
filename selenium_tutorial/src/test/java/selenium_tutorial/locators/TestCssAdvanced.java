@@ -1,15 +1,17 @@
 package selenium_tutorial.locators;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+
 //------- Now we will discuss about the advance CSS selector strategies -------
 // ------- demo URL : https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php -------
 // ------  https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/  ------
 // ------  https://www.w3schools.com/cssref/css_selectors.php ------
 // ------  https://www.w3.org/TR/selectors-3///selectors ------
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -92,7 +94,7 @@ public class TestCssAdvanced {
 		assertAll(
 				()-> assertEquals("Selenium Practice - Student Registration Form", driver.getTitle()),
 				()-> assertTrue(driver.findElement(tutorilspointImageAbsoluteXpath).isDisplayed()),
-				()-> assertTrue(driver.findElement(tutorilspointImageAbsoluteXpath).isDisplayed())
+				()-> assertTrue(driver.findElement(tutorilspointImageRelativeXpath).isDisplayed())
 				);
 		driver.findElement(txtbox_name1).clear();
 		driver.findElement(txtbox_name1).sendKeys("Jay Shree Krishna");
