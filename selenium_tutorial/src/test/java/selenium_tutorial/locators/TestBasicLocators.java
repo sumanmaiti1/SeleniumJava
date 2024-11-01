@@ -41,7 +41,7 @@ import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
 //@TestInstance(Lifecycle.PER_CLASS)
 //@Execution(ExecutionMode.CONCURRENT)
-public class TestBasicLocators1 {
+public class TestBasicLocators {
 	
 	private WebDriver driver;
 	private String url = "https://seleniumbase.io/demo_page";

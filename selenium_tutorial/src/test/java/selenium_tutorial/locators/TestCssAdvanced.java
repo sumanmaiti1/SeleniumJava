@@ -101,8 +101,5 @@ public class TestCssAdvanced {
 		System.out.println(driver.findElement(txtbox_name3).getDomProperty("value"));
 		System.out.println("Total Links in Page : " + driver.findElements(allLinks).size());
 		
-//		for(WebElement e: driver.findElements(allLinks)) {
-//			System.out.println(e.getAttribute("href"));
-//		}
 	}
 }
