@@ -46,7 +46,7 @@ class AnotherClass1{
 	//---------------- For Own Class Method in Before All, AfterAll if Test Instance in set to PER CLASS, NO need to set the method as STATIC
 	@BeforeAll
 	void BeforeAllTest() {
-		System.out.println("This method from Different Class will be called After All method. And once per Test Class");
+		System.out.println("This method from Different Class will be called Before All method. And once per Test Class");
 	}
 	
 	//---------------- For Own Class Method in Before All, AfterAll if Test Instance in set to PER METHOD, NO need to set the method as STATIC
