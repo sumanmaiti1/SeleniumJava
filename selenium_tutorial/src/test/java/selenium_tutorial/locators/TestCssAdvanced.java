@@ -20,7 +20,7 @@ import org.openqa.selenium.WebElement;
 
 import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
-public class TestCssAdvance {
+public class TestCssAdvanced {
 	
 	private WebDriver driver;
 	private String url = "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php";
