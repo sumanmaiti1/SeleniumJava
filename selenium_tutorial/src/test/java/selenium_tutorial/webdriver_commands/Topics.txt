@@ -89,11 +89,11 @@ The below are the list of Selenium WebDriver commands, which will be explained l
     By.tagName() - Done
     getScreenshotAs()
     getFullPageScreenshotAs()
-    getWindowHandle()
-    getWindowHandles()
-    window()
-    newWindow()
-    switchTo()
+    getWindowHandle() - Done
+    getWindowHandles() - Done
+    window() - Done
+    newWindow() - Done
+    switchTo() - Done
     selectByVisibleText()
     selectByIndex()
     selectByValue()
