@@ -1,0 +1,150 @@
+Here in this section of tutorials we will discuss about dome of thePredefined methods of Selenium WebDriver.
+for more details You can visit Official website : https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebDriver.html
+
+    get() - Done
+        Used to open the specified URL’s web page
+        http:// needs to be provided, otherwise the specified URL wont get opened
+    manage().window().maximize() - Done
+        Used to maximize the current web page
+    manage().window().minimize() - Done
+        Used to minimize the current web page and execute the script
+    findElement() - Done
+        By class and its predefined methods
+            id()  – By.id(“confirm”)
+            name() – By.name(“q”)
+            className() – By.className(“classone”)
+            linkText() – By.linkText(“compendiumdev”)
+            partialLinkText() – By.partialLinkText(“compendium”)
+            cssSelector() – By.cssSelector(“#confirm”)
+            xpath() – By.xpath(“//input[@id=’confirm’]”)
+    WebElement - Done
+        Predefined interface in Selenium
+        The purpose of using WebElement
+        Store the UI element located by the findElement() to reference variable of WebElement interface
+        
+        click() - Done
+            Used to perform click operation on different UI elements like Button, link, checkbox option and radio option etc
+        sendKeys() - Done        
+            Used to enter text into the text fields like text box, text area, password fields etc.
+        clear() - Done
+            Used to clear the text available in the text box or text area fields
+        getText() - Done
+            Used to retrieve the elements text (i.e. The text between the starting and ending tags of HTML elements)
+        getTitle() - Done
+            Used to retrieve the title of the current web page
+        getCurrentUrl() - Done
+            Used to retrieve the URL of the current web page
+        close() - Done
+            Used to close the current Browser window
+        quit() - Done
+            Used to close all the Browser windows (i.e. All the browser windows, including child windows will be closed)
+        getAttribute() - Done - Depreciated
+            Used to retrieve the value stored in the specified attribute value of the html element
+        isDisplayed() - Done 
+            Used to find out whether the element is displayed on the page (i.e. available on the page) before performing operations on it
+        isEnabled() - Done 
+            Used to find out whether the element is enabled or disabled before performing operation on it
+        isSelected() - Done 
+            Used to find out whether the radio options and checkbox options are selected or not.
+        navigate() - Done
+            Used to perform operations like navigate back to previous page, navigate forward again or refreshing the current
+        getPageSource() - Done
+            Used to retrieve all the source code of the current page and return in the form of String
+        submit() - Done
+            Used to submit a form – Example: Search text field and Search Button on Omayo
+        getTagName() - Done
+            Used to get the html tag of the provided element – Example: find tag name of Search text field
+        getCSSValue() - Done
+            driver.findElement(By.id(“home”)).getCssValue(“line-height”);
+        getSize() - Done
+            Used to get the height and width of the given element
+            Dimension d =driver.findElement(By.id(“but2”)).getSize();
+            d.height and d.width
+        getLocation() - Done
+            Used to get the x and y coordinate position of the given element
+            Pointp=driver.findElement(By.id(“but2”)).getLocation();
+            p.x and p.y
+        getRect() - Done
+            Used to get the x and y coordinate position of the given element, along with height and width of the element
+            Rectangle rectangle = driver.findElement(By.id(“but2”)).getRect()
+            rectangle.getX()
+            rectangle.getY()
+            rectangle.getWidth()
+            rectangle.getHeight()
+    fullScreen() - Done
+        Used to display the web page in full screen mode
+        driver.manage().window().fullscreen();
+    setSize() - Done
+        Used to resize the browser window in the specified dimensions
+    getClass() - Done
+        Used to retrieve the Class name of the provided object
+        driver.getClass().getSimpleName()
+    pageLoadTimeout() - Done
+        Used to change the default time for loading web page
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(3));
+
+The below are the list of Selenium WebDriver commands, which will be explained later as per the need basis:
+
+    findElements() - Done
+    By.tagName() - Done
+    getScreenshotAs()
+    getFullPageScreenshotAs()
+    getWindowHandle()
+    getWindowHandles()
+    window()
+    newWindow()
+    switchTo()
+    selectByVisibleText()
+    selectByIndex()
+    selectByValue()
+    isMultiple()
+    getOptions()
+    getFirstSelectedOption()
+    getAllSelectedOptions()
+    deselectByVisibleText()
+    deselectByIndex()
+    deselectByValue()
+    deselectAll()
+    frame()
+    parentFrame()
+    defaultContent()
+    implicitlyWait() - Done
+    until() 
+    visibilityOfElementLocated()
+    elementToBeClickable()
+    invisibilityOfElementLocated()
+    alert()
+    getText() – Alert
+    accept()
+    dismiss()
+    alertIsPresent()
+    sendKeys()- Alert
+    moveToElement()
+    click() – Actions
+    dragAndDropBy() 
+    contextClick()
+    doubleClick()
+    dragAndDrop()
+    keyDown()
+    keyUp()
+    sendKeys() – Actions
+    chord()
+    build()
+    perform()
+    executeScript()
+    executeAsyncScript()
+    getCookie()
+    getCookieNamed()
+    addCookie()
+    deleteCookieNamed()
+    deleteCookie()
+    deleteAllCookies()
+    below()
+    toRightOf()
+    toLeftOf()
+    toRightOf()
+    above()
+    near()
+    installExtension()
+    uninstallExtension()
+    print()

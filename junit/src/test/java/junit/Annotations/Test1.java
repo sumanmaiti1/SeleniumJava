@@ -9,7 +9,7 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 import junit.Calculator;
 
-//@TestInstance(Lifecycle.PER_CLASS) --------------- Single Instance of Class for all the Methods/tests
+//@TestInstance(Lifecycle.PER_CLASS) //--------------- Single Instance of Class for all the Methods/tests
 @TestInstance(Lifecycle.PER_METHOD) //--------------- Diff Instance of Class for each the Methods/tests
 public class Test1 {
 

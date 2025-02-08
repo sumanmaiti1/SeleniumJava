@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 public class BrowserFactory {
 	
 	private String browserName;
-	private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> drivers = new ThreadLocal<WebDriver>();
 	
 	//------------get browser instance ------------
 	public static synchronized WebDriver getDriver(String browserName) {
