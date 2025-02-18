@@ -30,6 +30,8 @@ public class BrowserFactory {
 		return drivers.get();
 	}
 	
+	
+	
 	//------------close browsder instance ------------
 	public static synchronized void quitDriver() {
 		WebDriver driver = drivers.get();

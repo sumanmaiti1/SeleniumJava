@@ -45,4 +45,7 @@ public class TextXpathAdvanced {
 	private By td_following_siblings = By.xpath("(//td[text()='Cantrell'])[2]/following-sibling::td");
 	private By chkbox_music = By.xpath("//label[text()='Music']/preceding-sibling::input");
 	
+	//------------ https://tutorialsninja.com/demo/index.php?route=product/product&product_id=40 --------------
+	private By image_iphone4LightBox = By.xpath("//img[contains(@src,'iphone_4') and not(@alt='iPhone')]");	//------------ usage of AND NOT in xpath
+	
 }
