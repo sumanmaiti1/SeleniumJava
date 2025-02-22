@@ -1,4 +1,5 @@
 //-------------- https://www.hdfcbank.com/
+//-------------- Handle BootStrap Dropdown
 
 package selenium_tutorial.SelectBoxDropDownBox;
 
@@ -66,8 +67,8 @@ public class DropDown5 {
 		selectvaluesFromBootstrapDropdown(new By[] {By.xpath("//li[text()='".concat(product).concat("']"))});
 		
 		
-		assertTrue(driver.findElement(By.xpath("//li[text()='".concat(productType).concat("']"))).getText().contains(productType));
-		assertTrue(driver.findElement(By.xpath("//li[text()='".concat(product).concat("']"))).getText().contains(productType));
+		assertTrue(driver.findElement(By.xpath("//span[text()='".concat(productType).concat("']"))).getText().contains(productType));		
+		assertTrue(driver.findElement(By.xpath("//div[@class='drp2']//span[text()='".concat(product).concat("']"))).getText().contains(product));
 		
 	}
 	
