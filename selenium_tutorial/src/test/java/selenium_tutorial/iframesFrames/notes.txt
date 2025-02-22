@@ -1,0 +1,55 @@
+Topics To Cover :
+-----------------
+
+What are iframes?
+Purpose of using HTML iframes 
+Difference between frames and iframes
+NoSuchElementException and handling frames
+Switch to Frames using switchTo().frame()
+Different ways we can switch to frames
+Using id locator for switching to frames
+Using name locator for switching to frames
+Using WebElement for switching to frames
+Using index for switching to frames
+Nested Frames / Child Frames / Inner Frames
+Switching to Parent Frames, Sibling Frames and Children frames
+Switching to multiple frames using index
+
+
+- What are iframes?
+  		iframe is one of the tags available in HTML. Using iframe we can embed another HTML page in a HTML page.
+  		Practical DemonstrationExamples of applications using iframe:W3Schools
+  		
+- Difference between frame and iframe
+  		frames divide the web page into multiple sections, where each section can load a separate HTML document. 
+  			Example of applications using frames:Java 8 API pages
+  		iframes are used in HTML pages, to embed other HTML pages anywhere in the HTML document.
+  		
+- We get NoSuchElementException, if we don't switch to iFrames/frames and perform operations on any UI element inside an iframe.
+ 		Practical Demonstration - https://omayo.blogspot.com/
+ 		
+ 		How to find-out whether the required UI element is inside a frameDifferent 
+ 		possible reasons for getting a NoSuchElementException
+ 		Switch to a frame and performing operation on any UI element inside the frameswitchTo().frame()
+- Different ways we can switch to the frames
+  		Using id locator of framePractical Demonstration - 			https://omayo.blogspot.com/
+  		Using name locator of framePractical Demonstration - 		https://docs.oracle.com/javase/8/docs/api/
+  		Using WebElement of a frameExample: 						https://blogpendingtasks.blogspot.com/p/switchtoframeusingwebelement.html
+  		Using index of a frameFinding number of frames on the page  https://omayo.blogspot.com/
+  		
+  		iframedriver.findElements(By.tagName("iframe")).size()
+  		Switching to a frame using index 0 when there is only one frame on the page
+  		https://the-internet.herokuapp.com/iframe
+  		
+  		End of the session - Multiple frames on the pageSwitching to the frame using index when there are multiple frames available on the page
+  		
+- Nested Frames - Parent, Child and Sibling Frames
+  		Frame inside another frame			Example: https://ui.vision/demo/webtest/frames/
+  		
+- Switching to the frame using index when there are multiple frames available on the page
+  		Finding number of frames on the page
+  		https://docs.oracle.com/javase/8/docs/api/
+  		
+  		driver.findElements(By.tagName("iframe")).size()
+  		Finding the index of the frame in which the required UI element is available
+  		Switching to the frame using index when there are multiple frames available on the page - Demonstrate
