@@ -1,0 +1,35 @@
+ACTION CLASS / ACTION CHAINS
+-------------------------------
+
+- Actions is a predefined Class of Selenium WebDriver
+- Actions class contain various predefined methods which can simulate Mouse and Keyboard Events
+- The below are the different methods of Actions class which we can use in automation for handing Mouse and keyboard actions:
+  	moveToElement(), 
+	click(), 
+	perform() and build() methods
+		Demonstrate moving the mouse to Blogs menu, followed by Selenium By Arun menu option and clicking it using mouse 
+		Optimizing the above program using build().perform()
+		Don't huddle the mouse while handing the mouse actions using Actions 
+
+	classdragAndDropBy()
+		Demonstrate dragging and dropping the startButton on a slider horizontal to the rightDemonstrate dragging and dropping the startButton 			horizontal to the left
+		Example -  http://omayo.blogspot.com/p/page3.html
+
+	contextClick()
+		Demonstrate right clicking on Search Box field
+		http://tutorialsninja.com/demo/
+	doubleClick()
+		Demonstrate double clicking on double click text in the omayo blog - Demonstrate 
+	hereclickAndHold() moveToElement() and release()
+		http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+	dragAndDrop()
+		Demonstrate dragging and dropping an element from a location to a different location
+		Application URL: http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+	keyDown() and keyUp() methodsKeys()Class and its predefined methods
+		Demonstrating opening a link in new tab (Compendium Link on Omayo)
+	Resizing using dragAndDropBy(element,width,height)
+		https://jqueryui.com/resizable/JQuery 
+	Right Click Menu 
+		https://swisnl.github.io/jQuery-contextMenu/demo.
+	htmlsendKeys(), pause() and click(WebElement)
+		http://tutorialsninja.com/demo/index.php?route=account/register
