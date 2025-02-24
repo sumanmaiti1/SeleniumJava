@@ -7,9 +7,8 @@ ACTION CLASS / ACTION CHAINS
   	moveToElement(), 
 	click(), 
 	perform() and build() methods
-		Demonstrate moving the mouse to Blogs menu, followed by Selenium By Arun menu option and clicking it using mouse 
-		Optimizing the above program using build().perform()
-		Don't huddle the mouse while handing the mouse actions using Actions 
+		usage of Perform and build.
+		When to use build.
 
 	classdragAndDropBy()
 		Demonstrate dragging and dropping the startButton on a slider horizontal to the rightDemonstrate dragging and dropping the startButton 			horizontal to the left
