@@ -1,0 +1,38 @@
+Taking Screenshots in Selenium :
+--------------------------------
+
+- We can take screenshots in Selenium using the predefined Interface and methods in Selenium.
+- Demonstrate taking Screenshots in Selenium
+  Copy the below two lines of code, where ever we need to take screenshots and modify them accordingly:
+  
+  File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+  FileUtils.copyFile(screenshotFile, new File("screenshots\\screenshot1.jpg"));
+  
+  Note: We have to download the Jar files for importing FileUtils 
+  Google search for FileUtils common.io packageNote:
+  We can use FileHandler.copy() pre-defined class from Selenium, in place of FileUtils.
+
+
+(Selenium 4 - Changes) Taking Screenshots of Web Elements, Section and Full Page 
+	- getScreenshotAs()
+	- getFullPageScreenshotAs() - Only firefox browser
+
+
+Advantages of Taking Screenshots using Robot Class 
+
+- The following are the benefits of using Robot Class
+  We can take the screenshots which includes URL of the applicationWe can take the screenshots of the displayed alerts
+- Practical Demonstration
+
+  Robot robot = new Robot();
+  Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+  Rectangle rect = new Rectangle(dimension);
+  BufferedImage bufferedImage = robot.createScreenCapture(rect);
+  String screenshotPath = System.getProperty("user.dir")+"//Screenshots//robot.png";
+  ImageIO.write(bufferedImage,"png",new File(screenshotPath));
+
+
+Taking Screenshots of Full Page in any Browser using AShot API 
+
+	Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+	ImageIO.write(screenshot.getImage(),"PNG",new File(System.getProperty("user.dir")+"/Screenshots/fullscreenshot.png"));

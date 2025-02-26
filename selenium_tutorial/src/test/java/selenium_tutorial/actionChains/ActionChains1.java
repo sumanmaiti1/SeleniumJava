@@ -24,6 +24,9 @@ public class ActionChains1 {
 	private By button_checkThis = By.xpath("//button[text()='Check this']");
 	private By checkBox_mrOption = By.id("dte");
 	private By textbox_textarea2 = By.xpath("//div[@id='HTML11']//textarea");
+	private By button_doubleClick = By.xpath("//button[contains(text(),'Double click Here')]");
+	private By label_doubleClick = By.id("testdoubleclick");
+	private By dropdown_myDropdown = By.id("myDropdown");
 	
 	@Test
 	public void Test1() throws InterruptedException {
@@ -53,6 +56,17 @@ public class ActionChains1 {
 							.keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).pause(1).sendKeys("Jay Shree Krishna").build().perform();
 		assertTrue(driver.findElement(textbox_textarea2).getDomProperty("value").equalsIgnoreCase("Jay Shree Krishna"));
 		Thread.sleep(1000);
+		
+		//--------------- Double Click -------------------
+		new Actions(driver).moveToElement(driver.findElement(button_doubleClick)).doubleClick().build().perform();
+		assertTrue(new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.alertIsPresent()).getText().contains("Double Click Successfull"));
+		new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.alertIsPresent()).accept();
+		
+		new Actions(driver).doubleClick(driver.findElement(label_doubleClick)).perform();
+		assertTrue(driver.findElement(dropdown_myDropdown).isDisplayed());
+		
+		Thread.sleep(1000);
+		
 	}
 	
 	@AfterEach
