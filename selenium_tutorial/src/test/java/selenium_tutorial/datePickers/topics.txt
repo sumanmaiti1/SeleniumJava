@@ -1,0 +1,20 @@
+DatePickers or Calendars :
+------------------------------
+Here we will discuss diferent types of Date Pickers or Types of calendars
+
+- Selecting dates from different type of Date Picker Calendar - Contains Previous and Next Month dates
+  	https://www.path2usa.com/travel-companions
+- Selecting previous month dates and future dates 
+  	http://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html
+- Demonstrating a program for handling a calendar and creating a generic re-usable method for it
+  	http://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html
+- Using JavascriptExecutor for selecting dates
+  	http://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html
+- Selecting date and time into a different type of date picker calendar:
+  	https://demo.guru99.com/test/
+- Selecting date in a different type of date picker calendar - Third Date
+  	https://www.hyrtutorials.com/p/calendar-practice.html
+- Selecting date in a different type of date picker calendar - Fourth Date
+  	https://www.hyrtutorials.com/p/calendar-practice.html
+- Selecting date in a different type of date picker calendar - Sixth Date
+  	https://www.hyrtutorials.com/p/calendar-practice.html
