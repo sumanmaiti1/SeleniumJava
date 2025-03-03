@@ -26,10 +26,10 @@ public class Calendar2 {
 	
 	
 	@Test
-	public void Test1() throws InterruptedException {
+	public void Test1() throws InterruptedException {	
 		
 		
-		String dateOfJourney = "03/01/2025";
+		String dateOfJourney = "03/12/2025";
 		
 		String[] arrDate = dateOfJourney.split("/");
 		String monthName = Month.of(Integer.parseInt(arrDate[0])).name();
@@ -44,6 +44,10 @@ public class Calendar2 {
 //		Thread.sleep(1000);
 //		driver.findElement(calendar_calendar1).sendKeys("");
 		
+//		//----------------- set Calender by JavaScript Executor ----------------
+//		((JavascriptExecutor)driver).executeScript("arguments[0].value=arguments[1]", driver.findElement(calendar_calendar1),dateOfJourney);
+//		Thread.sleep(1000);
+//		
 		
 		driver.findElement(calendar_calendar1).click();
 		assertTrue("After Clicking on calendar icon calendar body is not populated.", driver.findElement(div_calendarBody).isDisplayed());
@@ -51,24 +55,20 @@ public class Calendar2 {
 		//----------------------- Getting Currently Selected monthname and Year --------------------------
 		//---------------------- Click Next Month button untill month and year matches -------------------
 		
-		String selectedMonthYear = driver.findElement(selectedmonthName).getText().strip() + driver.findElement(selectedYear).getText().strip(); 
-		while(! selectedMonthYear.equalsIgnoreCase(monthName+year)) {
-			
-			if(Integer.parseInt(year)>Integer.parseInt( driver.findElement(selectedYear).getText().strip())) {
-				driver.findElement(nextButton).click();
-			}else if(Integer.parseInt(year)<Integer.parseInt( driver.findElement(selectedYear).getText().strip())) {
-				driver.findElement(nextButton).click();
-			}
-			
-			if(Integer.parseInt(arrDate[0]) > Month.valueOf(driver.findElement(selectedmonthName).getText().strip().toUpperCase()).getValue()) {
-				driver.findElement(nextButton).click();
-			}else if(Integer.parseInt(arrDate[0]) < Month.valueOf(driver.findElement(selectedmonthName).getText().strip().toUpperCase()).getValue()) {
-				driver.findElement(nextButton).click();
-			}
-			
-			Thread.sleep(500);
-			selectedMonthYear =  driver.findElement(selectedmonthName).getText().strip() + driver.findElement(selectedYear).getText().strip();			
+		String selectedMonthYear = driver.findElement(selectedmonthName).getText().strip() + driver.findElement(selectedYear).getText().strip();
+		
+		while(Integer.parseInt(year)>Integer.parseInt( driver.findElement(selectedYear).getText().strip()) ||  
+				Integer.parseInt(arrDate[0]) > Month.valueOf(driver.findElement(selectedmonthName).getText().strip().toUpperCase()).getValue()) {
+			driver.findElement(nextButton).click();
 		}
+		
+		while(Integer.parseInt(year) < Integer.parseInt( driver.findElement(selectedYear).getText().strip()) ||  
+				Integer.parseInt(arrDate[0]) < Month.valueOf(driver.findElement(selectedmonthName).getText().strip().toUpperCase()).getValue()) {
+			driver.findElement(prevButton).click();
+		}
+	
+		Thread.sleep(500);
+		selectedMonthYear =  driver.findElement(selectedmonthName).getText().strip() + driver.findElement(selectedYear).getText().strip();			
 		
 		//---------------- Now select the date ----------------
 		By datelink = By.xpath("//a[text()='" + Integer.parseInt(date) + "']");
