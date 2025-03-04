@@ -1,0 +1,30 @@
+Tables :
+------------------------------
+Here we will discuss different types of Tables
+
+HTML Table Basics:
+	Creating Tables using HTML Code
+
+LOCATOR Strategy: use above Created Webtable
+	Inspect table,thead,tbody,th,tr,td etc.
+	Locate First Row of WebTable
+	Locate Nth Row of WebTable
+	Locate Last Row of WebTable
+	Locate All Rows of WebTable
+
+	Locate First Column of WebTable
+	Locate Nth Column of WebTable
+	Locate Last Column of WebTable
+
+	Locate Cell data of Xth Row Yth Column
+
+Handling Static Tables :
+	Print all the Column Names
+	Find Number of Rows
+	Find Number of Columns
+	Print Complete table data row wise
+	Print Complete table data Column wise
+
+Handling Dynamic Tables using for loop
+Handling Dynamic Tables using XPath Axes
+Handling Dynamic Tables with Pagination 
