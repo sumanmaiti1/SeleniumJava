@@ -25,6 +25,8 @@ Handling Static Tables :
 	Print Complete table data row wise
 	Print Complete table data Column wise
 
+Dynamic Table With Pagenation : 
+	https://datatables.net/examples/basic_init/alt_pagination.html
 Handling Dynamic Tables using for loop
 Handling Dynamic Tables using XPath Axes
 Handling Dynamic Tables with Pagination 
