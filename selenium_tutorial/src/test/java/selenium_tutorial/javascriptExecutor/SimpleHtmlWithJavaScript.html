@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Script>
+			function changeColor(colour){
+				document.getElementById('textbox_1').style.background  = colour
+				document.getElementById('textbox_1').style.color = 'white'				
+			}
+		</Script>
+	</head>
+	
+	<body>
+		<div>
+			<h2 style="text-align:center">This is a Demo Webpage to demonstrate simple JavaScript</h2>
+		</div>
+		
+		<form id='form_1'>
+			<label>Udghosh Kare :</label>
+			<textarea type="text" id="textbox_1" name="Deva">Jay Shree Ram</textarea>
+			<br></br>
+			<input type="submit" value="Trun Red" onclick="changeColor('red')" style="background-color:Red;color:white;">
+			<input type="submit" value="Trun Green" onclick="changeColor('green')" style="background-color:Green;color:white;">
+			<input type="submit" value="Trun Blue" onclick="changeColor('blue')" style="background-color:Blue;color:white;">
+			<input type="submit" value="Trun Black" onclick="changeColor('black')" style="background-color:Black;color:white;">
+		</form>
+		
+	</body>
+	
+</html>
