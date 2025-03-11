@@ -12,36 +12,38 @@ JavaScriptExecutor:
 			4) An Example to demonstrate javascript in simple html webpage. :- done in SimpleHtmlWithJavaScript.html
 
 3) DOM Basics : JavaScript uses DOM (Document Object Model) for accessing the elements in Webpage.
+		https://rahulshettyacademy.com/AutomationPractice/
 				
-		Dom Methods :------------------done in JacaScriptExecutor2.java
+		DOM Methods :------------------done in JacaScriptExecutor2.java
 		-------------
-			1) document.getElementById() 		
-			2) document.getElementsByClassName() 	
-			3) document.getElementsByName() 	
-			4) document.getElementsByTagName() 	
+			1) document.getElementById()
+			2) document.getElementsByClassName()
+			3) document.getElementsByName()
+			4) document.getElementsByTagName()
 			5) document.getElementsByTagNameNS() - Returns a list of elements with the given tag name belonging to the given namespace. 
 			6) document.querySelector() - The querySelector() method returns the first element that matches a CSS selector. 
-			7) click() 							
+			7) document.querySelectorAll()
+			8) click()
 			8) etc.
 		
-		Dom Properties :--------------done in JacaScriptExecutor2.java
+		DOM Properties :--------------done in JacaScriptExecutor2.java
 		----------------
-			1) innerHTML 			
-			2) id 					
-			3) value 				
-			4) document.title 		
-			5) document.url 		
+			1) innerHTML
+			2) id
+			3) value
+			4) document.title
+			5) document.url
 			6) DOM Style :
-				1) style.color 		
-				2) style.background  
+				1) style.color 
+				2) style.background
 				3) https://www.w3schools.com/jsref/dom_obj_style.asp
 
-4)  Click Element/s 			done in JacaScriptExecutor1.java
+4)  Click Element/s 			done in JacaScriptExecutor2.java
 5)  Imitating QTP/UFT Highlight Scenario (Flashing & Border of element)
-6)  Get Title of page
-7)  Get URL of page
-8)  Enter texts into Fields
-9)  Select Dates in Calendar
+6)  Get Title of page ------------------done in JacaScriptExecutor2.java
+7)  Get URL of page ------------------done in JacaScriptExecutor2.java
+8)  Enter texts into Fields ------------------done in JacaScriptExecutor2.java
+9)  Select Dates in Calendar ------------------done in JacaScriptExecutor3.java
 10) Display Alert Prompt Confirmation :- done in JacaScriptExecutor1.java
 11) Page Refresh 
 12) Page Scrolling
