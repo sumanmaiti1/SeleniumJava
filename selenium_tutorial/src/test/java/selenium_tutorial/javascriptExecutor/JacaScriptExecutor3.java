@@ -9,7 +9,9 @@ import java.util.Date;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -20,6 +22,7 @@ public class JacaScriptExecutor3 {
 	
 	WebDriver driver = BrowserFactory.getDriver("Chrome");	
 	private By calendar_calendar1 = By.id("form-field-travel_comp_date");
+	private By calendar_calendar2 = By.id("ivaliXpath");
 	private By button_search = By.xpath("//button[contains(@class,'elementor-button elementor-size-sm')]");
 	
 	@Test
@@ -37,7 +40,26 @@ public class JacaScriptExecutor3 {
 		
 		//------------ Highlight Search Button ----------------
 		highlightElement(driver.findElement(button_search),driver);
-
+		
+		//----------- Page Refresh --------------
+		System.out.println("---------------- Reloading the page using java script -------------------");
+		jse.executeScript("location.reload();");
+		
+		
+		//-------------- Catching javaScriptExceptions ----------------
+		try {
+			jse.executeScript("arguments[0].value=arguments[1]", driver.findElement(calendar_calendar2),new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
+		} catch (NoSuchElementException e) {
+			System.out.println("INVALID ELEMENT, NOSUCHELEMENT Exception : " +  e + "\n\n");
+		}
+		
+		
+		//-------------- Catching javaScriptExceptions ----------------
+		try {
+			jse.executeScript("arguments[0].value=arguments[1", driver.findElement(calendar_calendar1),new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
+		} catch (JavascriptException e) {
+			System.out.println("INVALID JAVASCRIPT Code, JavascriptException : " +  e);
+		}
 	}
 	
 	//------------- Highlight Element like UFT/QTP (Flashing + Border) ----------------
@@ -52,8 +74,10 @@ public class JacaScriptExecutor3 {
 	
 		js.executeScript("arguments[0].style.border = 'thick solid #f7ef4a'",element);
 		for(int i=0;i<=2;i++) {
-			js.executeScript("arguments[0].style.currentBackgroundColour = 'orange'",element);
-			Thread.sleep(200);
+			js.executeScript("arguments[0].style.background = 'orange'",element);
+			Thread.sleep(100);
+			js.executeScript("arguments[0].style.background = '" + currentBackgroundColour + "'",element);
+			Thread.sleep(100);
 		}
 		js.executeScript("arguments[0].style.currentBackgroundColour = '" + currentBackgroundColour + "'",element);
 		js.executeScript("arguments[0].style.border = 'None'",element);
