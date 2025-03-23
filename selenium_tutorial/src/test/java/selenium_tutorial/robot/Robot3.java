@@ -19,7 +19,9 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,9 +29,10 @@ import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
 public class Robot3 {
 	
-	WebDriver driver = BrowserFactory.getDriver("Chrome");
-	private By button_uploadFile = By.xpath("//label[@for='select-files-input']");
-	private By label_downloadedFileName = By.xpath("//h3[text()='k-meleon.exe']");
+	private By div_uploadFile = By.xpath("//div[@class='mb-3']");
+	private By button_upload = By.id("fileSubmit");
+	private By label_downloaded = By.xpath("//h1[text()='File Uploaded!']");
+	private By label_downloadedFileName = By.xpath("//p[contains(text(),'JayShreeRam')]");
 	
 	private By textBox_enterData = By.id("textbox");
 	private By button_generateFile = By.id("createTxt");
@@ -40,15 +43,17 @@ public class Robot3 {
 	private Robot3() throws AWTException{}
 
 	//--------------- Upload File using Robot ------------------
-	
+	@Test
 	public void test1() throws InterruptedException {
+		WebDriver driver = BrowserFactory.getDriver("Chrome");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://www.file.io/");		
-		assertTrue(driver.getTitle().equals("file.io - Super simple file sharing"));
+		driver.get("https://practice.expandtesting.com/upload");		
+		assertTrue(driver.getTitle().contains("Files Upload page for Automation Testing Practice"));
 		
-		driver.findElement(button_uploadFile).click();
+		driver.findElement(div_uploadFile).click();
 		robot.delay(2000);
-		StringSelection strSelection = new StringSelection("C:\\Users\\Radhe_Radhe\\Desktop\\k-meleon.lnk");
+		StringSelection strSelection = new StringSelection( System.getProperty("user.dir").concat("\\src\\test\\java\\selenium_tutorial\\robot\\downloads")
+															.concat("\\JayShreeRam.txt"));
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(strSelection,null); 
 		
 		
@@ -60,6 +65,11 @@ public class Robot3 {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		
+		Thread.sleep(2000);
+		
+		new Actions(driver).moveToElement(driver.findElement(button_upload)).perform();
+		new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOfElementLocated(button_upload)).click();
+		
 		List<WebElement> list = new WebDriverWait(driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(label_downloadedFileName));
 		
@@ -68,42 +78,30 @@ public class Robot3 {
 		assertAll("Checking if Upload is Completed successfully ", 
 				()->assertTrue(list.size()>=1));
 		
-		//--------------------- Download Files using Robot class ----------------
-		driver.findElements(button_downoadFile).get(0).click();
-		robot.delay(5000);
-		
-		String path = System.getProperty("user.dir").concat("\\src\\test\\java\\selenium_tutorial\\robot\\downloads\\k-meleon.lnk");
-		StringSelection strSelectionDownload = new StringSelection(path);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(strSelectionDownload,null); 
-		
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		assertTrue(new File(path).exists());
-		
 	}
 	
-	//--------------- Download File using Robot ------------------
-	@Test
-	public void test2() throws InterruptedException {
+	//--------------- Download File------------------
+   @Test
+	public void test2() throws InterruptedException {		
+		
+		String filePath = System.getProperty("user.dir").concat("\\src\\test\\java\\selenium_tutorial\\robot\\downloads");
+		
+		ChromeOptions options=new ChromeOptions();
+		Map<String, Object> prefs = new HashMap<String, Object>();
+		prefs.put("profile.default_content_settings.popups", 0);
+		prefs.put("download.default_directory", filePath);
+		options.setExperimentalOption("prefs",prefs);
+		WebDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
+		
+		//String path = System.getProperty("user.dir").concat("\\src\\test\\java\\selenium_tutorial\\robot\\downloads\\k-meleon.lnk");
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://demo.automationtesting.in/FileDownload.html");		
 		assertTrue(driver.getTitle().equals("File input - Multi select"));
 		
-		ChromeOptions options=new ChromeOptions();
-		Map<String, Object> prefs = new HashMap<String, Object>();
-		//String path = System.getProperty("user.dir").concat("\\src\\test\\java\\selenium_tutorial\\robot\\downloads\\k-meleon.lnk");
-		String path = System.getProperty("user.dir").concat("\\src\\test\\java\\selenium_tutorial\\robot\\downloads");
-		prefs.put("download.default_directory", path);
-
-		options.setExperimentalOption("prefs", prefs);
-		
 		//--------------------- Download Files using Robot class ----------------
+		
 		driver.findElement(textBox_enterData).clear();
 		driver.findElement(textBox_enterData).sendKeys("Jay Shree Ram");
 		driver.findElement(button_generateFile).click();
@@ -111,18 +109,10 @@ public class Robot3 {
 		robot.delay(5000);
 		
 		
-		StringSelection strSelectionDownload = new StringSelection(path);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(strSelectionDownload,null); 
+		assertTrue(new File(filePath + "\\info.txt").exists());
+		assertTrue(new File(filePath + "\\info.txt").delete());
 		
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		assertTrue(new File(path).exists());
+		driver.quit();
 		
 	}
 	

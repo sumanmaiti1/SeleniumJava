@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
-public class JacaScriptExecutor1 {
+public class JavaScriptExecutor1 {
 	
 	WebDriver driver = BrowserFactory.getDriver("Chrome");	
 	

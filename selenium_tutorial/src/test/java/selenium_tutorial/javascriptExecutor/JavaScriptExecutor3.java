@@ -18,7 +18,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
-public class JacaScriptExecutor3 {
+public class JavaScriptExecutor3 {
 	
 	WebDriver driver = BrowserFactory.getDriver("Chrome");	
 	private By calendar_calendar1 = By.id("form-field-travel_comp_date");

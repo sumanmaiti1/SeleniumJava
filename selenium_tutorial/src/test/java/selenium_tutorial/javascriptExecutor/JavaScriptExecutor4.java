@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
-public class JacaScriptExecutor4 {
+public class JavaScriptExecutor4 {
 	
 	WebDriver driver = BrowserFactory.getDriver("Chrome");	
 	private By textbox_airportFrom = By.id("form-field-travel_from");

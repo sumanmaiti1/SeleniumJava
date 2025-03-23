@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import selenium_tutorial.utilities.browserFactory.BrowserFactory;
 
-public class JacaScriptExecutor2 {
+public class JavaScriptExecutor2 {
 	
 	WebDriver driver = BrowserFactory.getDriver("Chrome");	
 	private By checkBox_option1 = By.id("checkBoxOption1");
