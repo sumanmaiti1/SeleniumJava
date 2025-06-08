@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" -->
+
+<suite name="All_Releases">
+
+    <suite-files>
+	    <suite-file path="testng_2025R1.xml" />
+	    <suite-file path="testng_2025R2.xml" />
+	    <suite-file path="testng_2025R3.xml" />
+	    <suite-file path="testng_Run_By_Package_Name.xml" />
+	</suite-files>
+	
+
+	
+</suite> <!-- Suite -->

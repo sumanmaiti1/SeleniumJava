@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is Manually Generated File -->  
+
+<suite name='2025 Release 1.0'>
+	<tests>
+		<test name='Smoke'>
+			<classes>
+				<class name = 'testNG.testNG.testNGXML.Login'>
+					<methods>
+						<include name='validLogin'/>
+					</methods>
+				</class>
+				
+				<class name = 'testNG.testNG.testNGXML.SignUp'>
+					<methods>
+						<include name='validSignUp'/>
+					</methods>
+				</class>
+				
+				<class name = 'testNG.testNG.testNGXML.Logout'>
+					<methods>
+						<include name='validLogOut'/>
+					</methods>
+				</class>				
+			</classes>
+		</test>
+
+		<test name='Regression'>
+			<classes>
+				<class name = 'testNG.testNG.testNGXML.Login'>
+					<methods>
+						<include name='validLogin'/>
+						<include name='inValidLoginWringUserName'/>
+						<include name='inValidLoginWrongPassword'/>
+					</methods>
+				</class>
+				
+				<class name = 'testNG.testNG.testNGXML.SignUp'>
+					<methods>
+						<include name='validSignUp'/>
+						<include name='inValidSignUp1'/>
+						<include name='inValidSignUp2'/>
+					</methods>
+				</class>
+				
+				<class name = 'testNG.testNG.testNGXML.Logout'>
+					<methods>
+						<exclude name='demoLogOutmethod1'/>
+						<exclude name='demoLogOutmethod2'/>
+					</methods>
+				</class>				
+			</classes>
+		</test>
+	</tests>			
+</suite>
+
+

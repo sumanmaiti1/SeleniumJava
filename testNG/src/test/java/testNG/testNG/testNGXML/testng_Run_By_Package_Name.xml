@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" -->
+
+<suite name="All_Releases">
+
+	<test name='Test Annotations'>
+		<!-- We can also include Package names while Running --> 
+		<packages>
+		      <package name="testNG.testNG.annotations"/>
+	   </packages>
+	</test>	
+	
+</suite> <!-- Suite -->

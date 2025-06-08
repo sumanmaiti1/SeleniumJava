@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is Manually Generated File -->  
+
+<suite name='2025 Release 2.0'>
+	<test name='Functional'>
+		<classes>
+			<class name = 'testNG.testNG.testNGXML.SignUp'/>
+			<class name = 'testNG.testNG.testNGXML.Login'/>										
+			<class name = 'testNG.testNG.testNGXML.CreateOrder'/>
+			<class name = 'testNG.testNG.testNGXML.Logout'/>
+		</classes>
+	</test>	
+</suite>
+
+
