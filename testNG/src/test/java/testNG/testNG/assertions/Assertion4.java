@@ -21,6 +21,5 @@ public class Assertion4 {
 		//fail();
 		//fail("Fail to Say Har har Mahadev !!!");
 		//fail("Fail to Say Jay Shree Ram !!!", new IllegalAccessException("You don't belong Here !!!"));
-		
 	}
 }
